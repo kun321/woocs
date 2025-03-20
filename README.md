@@ -1,12 +1,14 @@
-# doocs
+<div align="center">
+  <img src="https://cloud-minapp-47803.cloud.ifanrusercontent.com/1tvAaMjiUvbKRhX7.png" width="200" height="200" alt="woocs" />
+</div>
 
-An Electron application with Vue and TypeScript
+# woocs
 
-## Recommended IDE Setup
+基于 [doocs/md](https://github.com/doocs/md) 开发的微信 Markdown 编辑器桌面应用。
 
-- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
+![](https://cloud-minapp-47803.cloud.ifanrusercontent.com/1tvAeEyU14WC5WqH.png)
 
-## Project Setup
+## 开发
 
 ### Install
 
