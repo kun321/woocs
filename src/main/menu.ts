@@ -25,7 +25,8 @@ const template = [
           },
           { type: 'separator' },
           {
-            label: '偏好设置',
+            label: 'Settings',
+            accelerator: 'CmdOrCtrl+,',
             click: () => {
               send2Render({
                 action: 'settings'
@@ -49,6 +50,7 @@ const template = [
     submenu: [
       {
         label: '新建',
+        accelerator: 'CmdOrCtrl+N',
         click: () => {
           send2Render({
             action: 'new-file'
@@ -57,6 +59,7 @@ const template = [
       },
       {
         label: '导入 .md',
+        accelerator: 'Shift+CmdOrCtrl+I',
         click: () => {
           send2Render({
             action: 'open-file'
