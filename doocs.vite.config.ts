@@ -21,7 +21,7 @@ export default {
     UnoCSS(),
     vueDevTools(),
     nodePolyfills({
-      include: [`path`, `util`, `timers`, `stream`, `fs`],
+      include: [`path`, `util`, `timers`, `stream`, `fs`, `crypto`],
       overrides: {
         // Since `fs` is not supported in browsers, we can use the `memfs` package to polyfill it.
         // fs: 'memfs',
