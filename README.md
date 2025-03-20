@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://cloud-minapp-47803.cloud.ifanrusercontent.com/1tvAaMjiUvbKRhX7.png" width="200" height="200" alt="woocs" />
+  <img src="https://cloud-minapp-47803.cloud.ifanrusercontent.com/1tvAaMjiUvbKRhX7.png" width="150" height="150" alt="woocs" />
 </div>
 
 # woocs
@@ -34,3 +34,11 @@ $ pnpm build:mac
 # For Linux
 $ pnpm build:linux
 ```
+
+---
+
+欢迎关注我的公众号：前端生存指南，一起聊聊前端、AI 和生活。
+
+<center>
+    <img src="https://cloud-minapp-47803.cloud.ifanrusercontent.com/1tvAM68Cvrx3bfLR.jpg" style="width: 180px;">
+</center>
