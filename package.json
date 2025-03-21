@@ -1,10 +1,10 @@
 {
   "name": "woocs",
   "version": "0.1.0",
-  "description": "An Electron application with Vue and TypeScript",
+  "description": "基于 doocs/md 开发的微信 Markdown 编辑器桌面应用",
   "main": "./out/main/index.js",
-  "author": "example.com",
-  "homepage": "https://electron-vite.org",
+  "author": "sleepy-zone",
+  "homepage": "https://sleepy-zone.github.io/woocs-home/",
   "scripts": {
     "format": "prettier --write .",
     "lint": "eslint --cache .",

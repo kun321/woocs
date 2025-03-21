@@ -1,0 +1,76 @@
+name: package
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  package_linux:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    - uses: actions/cache@v3
+      with:
+        path: ~/.pnpm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - run: pnpm install
+    - run: pnpm run build:linux
+    - uses: actions/upload-artifact@v3
+      with:
+        name: linux
+        path: |
+          dist/*.deb
+          dist/*.rpm
+          dist/*.zip
+  package_macos:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    - uses: actions/cache@v3
+      with:
+        path: ~/.pnpm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - run: pnpm install
+    - run: pnpm build:mac
+    - uses: actions/upload-artifact@v3
+      with:
+        name: macos
+        path: |
+          dist/*.dmg
+          dist/*.zip
+  package_windows:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    - uses: actions/cache@v3
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - run: pnpm install
+    - run: pnpm run build:win
+    - uses: actions/upload-artifact@v3
+      with:
+        name: windows
+        path: |
+          dist/*.exe
+          dist/*.nupkg
+          dist/*.zip
