@@ -12,8 +12,8 @@ jobs:
   package_linux:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
       with:
         node-version: '18'
     - uses: actions/cache@v3
@@ -24,7 +24,7 @@ jobs:
           ${{ runner.os }}-node-
     - run: pnpm install
     - run: pnpm run build:linux
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: linux
         path: |
@@ -34,8 +34,8 @@ jobs:
   package_macos:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
       with:
         node-version: '18'
     - uses: actions/cache@v3
@@ -46,7 +46,7 @@ jobs:
           ${{ runner.os }}-node-
     - run: pnpm install
     - run: pnpm build:mac
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: macos
         path: |
@@ -55,8 +55,8 @@ jobs:
   package_windows:
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
       with:
         node-version: '18'
     - uses: actions/cache@v3
@@ -67,7 +67,7 @@ jobs:
           ${{ runner.os }}-node-
     - run: pnpm install
     - run: pnpm run build:win
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: windows
         path: |
