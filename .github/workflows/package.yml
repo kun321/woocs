@@ -27,9 +27,9 @@ jobs:
       with:
         name: linux
         path: |
+          dist/*.AppImage
+          dist/*.snap
           dist/*.deb
-          dist/*.rpm
-          dist/*.zip
   package_macos:
     runs-on: macos-latest
     steps:
@@ -69,5 +69,3 @@ jobs:
         name: windows
         path: |
           dist/*.exe
-          dist/*.nupkg
-          dist/*.zip
