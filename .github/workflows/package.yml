@@ -16,12 +16,11 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: '18'
-    - uses: actions/cache@v3
+        cache: 'pnpm'
+    - name: Install pnpm
+      uses: pnpm/action-setup@v3
       with:
-        path: ~/.pnpm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
+        version: 9
     - run: pnpm install
     - run: pnpm run build:linux
     - uses: actions/upload-artifact@v4
@@ -38,12 +37,11 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: '18'
-    - uses: actions/cache@v3
+        cache: 'pnpm'
+    - name: Install pnpm
+      uses: pnpm/action-setup@v3
       with:
-        path: ~/.pnpm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
+        version: 9
     - run: pnpm install
     - run: pnpm build:mac
     - uses: actions/upload-artifact@v4
@@ -59,12 +57,11 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: '18'
-    - uses: actions/cache@v3
+        cache: 'pnpm'
+    - name: Install pnpm
+      uses: pnpm/action-setup@v3
       with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
+        version: 9
     - run: pnpm install
     - run: pnpm run build:win
     - uses: actions/upload-artifact@v4
